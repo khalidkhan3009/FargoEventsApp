@@ -9,9 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.eventboard.eventboardapp.R;
-import com.eventboard.eventboardapp.retrofit.APIEndpoints;
-import com.eventboard.eventboardapp.retrofit.EventsAPI;
-import com.eventboard.eventboardapp.retrofit.Token;
+import com.eventboard.eventboardapp.pojo.Token;
 import com.eventboard.eventboardapp.utils.Constant;
 import com.eventboard.eventboardapp.utils.DataPreference;
 import com.eventboard.eventboardapp.utils.Utils;
@@ -63,7 +61,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             Utils.showLoading("Logging in.....");
 
             /*Create handle for the RetrofitInstance interface*/
-            APIEndpoints service = EventsAPI.getRetrofitInstance().create(APIEndpoints.class);
+          //  APIEndpoints service = EventsAPI.getRetrofitInstance().create(APIEndpoints.class);
 
             Map<String, String> params = new HashMap<String, String>();
             params.put("Username", usrname);

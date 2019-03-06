@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--   <ImageView
+             android:layout_marginLeft="15dp"
+              android:layout_centerVertical="true"
+              android:id="@+id/img_event"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@mipmap/ic_launcher"
+              />-->
+
+        <com.eventboard.eventboardapp.customview.CircleImageView
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/img_event"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            app:border_color="@color/colorPrimary"
+            app:border_width="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/img_event"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_event_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Title Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/text_event_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="12/20/18 4pm - 5:30pm"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+</LinearLayout>

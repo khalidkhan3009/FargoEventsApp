@@ -1,4 +1,4 @@
-package com.eventboard.eventboardapp.retrofit;
+package com.eventboard.eventboardapp.pojo;
 
 /**
  * Created by Khalid Khan on 03-04-2019.
