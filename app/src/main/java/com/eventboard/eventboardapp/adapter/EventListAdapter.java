@@ -7,13 +7,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.eventboard.eventboardapp.R;
 import com.eventboard.eventboardapp.activity.BaseActivity;
 import com.eventboard.eventboardapp.activity.EventDetailsActivity;
+import com.eventboard.eventboardapp.customview.CircleImageView;
 import com.eventboard.eventboardapp.pojo.Events;
 import com.squareup.picasso.Picasso;
 
@@ -91,7 +91,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.MyVi
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         private TextView text_event_name, text_event_time;
-        private ImageView img_event;
+        private CircleImageView img_event;
         private RelativeLayout item_layout;
 
         public MyViewHolder(View itemView) {
@@ -100,7 +100,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.MyVi
             item_layout = (RelativeLayout) itemView.findViewById(R.id.item_layout) ;
             text_event_name = (TextView)itemView.findViewById(R.id.text_event_name);
             text_event_time = (TextView)itemView.findViewById(R.id.text_event_time);
-            img_event = (ImageView) itemView.findViewById(R.id.img_event);
+            img_event = (CircleImageView) itemView.findViewById(R.id.img_event);
 ;
         }
     }

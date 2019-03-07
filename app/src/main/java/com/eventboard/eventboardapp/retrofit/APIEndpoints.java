@@ -34,6 +34,6 @@ public interface APIEndpoints {
 
 
     @GET("/api/v1/speakers/{id}")
-    Call<Speaker> getSpeakerDetails(@Path("id") String speakerId);
+    Call<Speaker> getSpeakerDetails(@Header(Constant.AUTHORIZATION) String token, @Path("id") int speakerId);
 
 }

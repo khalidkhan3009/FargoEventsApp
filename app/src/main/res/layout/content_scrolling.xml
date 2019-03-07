@@ -13,6 +13,8 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/layout_event"
+            android:visibility="invisible"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_width="match_parent"
@@ -68,17 +70,48 @@
                     android:text="4817, 207 4th St N, Fargo, ND 58102"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorPrimary"
+                    android:autoLink="map"/>
 
             </LinearLayout>
 
         </LinearLayout>
 
         <View
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/gray"/>
+
+        <LinearLayout
+            android:id="@+id/layout_speaker"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/speakers"
+                android:textSize="15sp"
+                android:textColor="@color/gray"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/recyclerView_speakers_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
     </LinearLayout>
 
